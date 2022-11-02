@@ -2,7 +2,7 @@ import { openDB } from 'idb';
 import 'regenerator-runtime/runtime';
 
 const initdb = async () =>
-  openDB('jate', 1, {
+  openDB('jate_db', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
         console.log('jate database already exists');
