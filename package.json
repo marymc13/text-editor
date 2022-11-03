@@ -1,15 +1,15 @@
 {
   "name": "jate",
-  "description":"",
+  "description": "",
   "version": "1.0.0",
-  "private": "true",
+  "main": "server.js",
   "engines": {
     "node": "16.16.0"
   },
   "scripts": {
-    "start:dev": "concurrently \"cd server && npm run server\"  \"cd client && npm run build\"",
+    "start:dev": "concurrently \"cd server && npm run server\"  \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
-    "server": "cd server nodemon server.js --ignore client",
+    "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "client": "cd client && npm start"
     
@@ -21,17 +21,11 @@
   "author": "Mary Paul",
   "license": "ISC",
   "dependencies": {
-    "@codemirror/lang-javascript": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "codemirror": "^6.0.1",
-    "concurrently": "^7.4.0",
-    "idb": "^7.1.0",
-    "nodemon": "2.0.20",
-    "rollup": "^2.79.1"
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
   },
-  "main": "index.js",
   "devDependencies": {
-    "webpack-pwa-manifest": "^4.3.0",
-    "workbox-webpack-plugin": "^6.5.4"
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }

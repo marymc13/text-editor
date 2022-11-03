@@ -31,7 +31,7 @@
       "type": "image/png"
     }
   ],
-  "name": "Jate-code-editor-Application",
+  "name": "Text Editor",
   "short_name": "JATE",
   "orientation": "portrait",
   "display": "standalone",
